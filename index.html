@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<!--
+    Prologue by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Prologue by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+		/* Style for level-1 bullets */
+		ul.level-1 {
+			list-style-type: disc;
+			font-family: inherit;
+			font-size: 1em;
+		}
+
+		/* Style for level-2 bullets */
+		ul.level-1 ul.level-2 {
+			list-style-type: circle;
+			font-family: inherit;
+			font-size: 0.9em;
+		}
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 60px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+			position: relative;
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 50px; /* 10px top/bottom 60px right/left */
+            border: none;
+            width: 80%;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            max-height: 90%;
+            overflow-y: auto; 
+        }
+
+        .close {
+			position: absolute;
+    		top: 10px; /* Adjust as needed */
+    		right: 20px; /* Adjust as needed */
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 45%;
+            height: auto;
+            margin: 10px;
+        }
+
+        /* Education section styles */
+        .education-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: flex-start; 
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .education-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .education-item div {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .education-item strong {
+            font-size: 1.5em;
+            font-family: 'Georgia', serif;
+            margin-bottom: -30px;
+        }
+
+        .education-item p {
+            margin: 0;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+    <div id="header">
+
+        <div class="top">
+
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48"><img src="images/avatar3.jpg" alt="" /></span>
+                <h1 id="title">Quang Huynh</h1>
+                <p>Mechanical Engineer</p>
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                    <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/huu-quang-huynh/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+        <section id="top" class="one dark cover">
+            <div class="container">
+
+                <header>
+                    <h2 class="alt">Hi! I'm <strong>Quang</strong></h2>
+                    <p>Master's student at UC Berkeley in Mechanical Engineering</p>
+                </header>
+
+                <footer>
+                    <a href="#portfolio" class="button scrolly">My Portfolio</a>
+                </footer>
+
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="two">
+            <div class="container">
+
+                <header>
+                    <h2>Portfolio</h2>
+                </header>
+
+                <p>Welcome to my portfolio! 
+				I'm thrilled to share with you a glimpse into my world of innovation, creativity, and engineering excellence.
+				 Throughout my journey, I've had the privilege of working on a diverse range of projects, each one fueling my passion for problem-solving and pushing the boundaries of what's possible.</p>
+
+                <div class="row">
+                    <div class="col-4 col-12-mobile">
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal1"><img src="images/project1.jpg" alt="" /></a>
+                            <header>
+                                <h3>Development of Longitudinal and Lateral Control Systems for Autonomous IndyCar Racing</h3>
+                            </header>
+                        </article>
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal2"><img src="images/project2.png" alt="" /></a>
+                            <header>
+                                <h3>Refining Autonomous Go-Karts: Advanced Control, Path Planning, and Localization Prototyping</h3>
+                            </header>
+                        </article>
+                    </div>
+                    <div class="col-4 col-12-mobile">
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal3"><img src="images/project3.png" alt="" /></a>
+                            <header>
+                                <h3>Enhancing Aerodynamic Coefficient Prediction through Artificial Neural Networks</h3>
+                            </header>
+                        </article>
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal4"><img src="images/project4.png" alt="" /></a>
+                            <header>
+                                <h3>Turbocharger Design: Boosting Performance with Precision Engineering</h3>
+                            </header>
+                        </article>
+                    </div>
+                    <div class="col-4 col-12-mobile">
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal5"><img src="images/project5.png" alt="" /></a>
+                            <header>
+                                <h3>Innovating Aircraft Brake System Design</h3>
+                            </header>
+                        </article>
+                        <article class="item">
+                            <a href="#" class="image fit open-modal" data-modal="modal6"><img src="images/project6.png" alt="" /></a>
+                            <header>
+                                <h3>Designing an Advanced Speed Reducer</h3>
+                            </header>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>About Me</h2>
+                </header>
+
+                <a href="#" class="image featured"><img src="images/aboutme.png" alt="" /></a>
+
+                <p>Hello, I'm Quang, a Mechanical Engineering professional seeking full-time
+				opportunities in Control Systems and Product Design. With expertise in
+				product design, control systems, machine learning,
+				and manufacturing processes , I excel in CAD (Catia V5, 3Dexperience, SolidWorks),
+				Computational Fluid Dynamics (CFD), and programming (Python, SQL, MATLAB, C++), 
+				as well as data science (NumPy, Pandas, Keras, PyTorch). My projects include 
+				autonomous vehicle trajectory planning, go-kart brake design, state estimations using Kalman Filters and predictive modeling for aircraft wing efficiency using machine learning.
+				I'm eager to apply my skills and contribute to innovative projects in your 
+				organization.</p>
+            </div>
+        </section>
+
+		<!-- Education -->
+        <section id="education" class="four">
+            <div class="container">
+
+                <header>
+                    <h2>Education</h2>
+                </header>
+
+                <div class="education-section">
+                    <div class="education-item">
+                        <img src="images/berkeley2.png" alt="UC Berkeley Logo">
+                        <div>
+                            <strong>University of California, Berkeley</strong><br>
+                            Master of Engineering in Mechanical Engineering<br>
+							<b style="font-size: 0.8em;">GPA: 3.83</b>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <img src="images/ensam2.png" alt="Arts et Métiers ParisTech Logo">
+                        <div>
+                            <strong>Arts et Métiers ParisTech</strong><br>
+                            Combined Bachelor and Master of Science in Mechanical and Industrial Engineering<br>
+							<b style="font-size: 0.8em;">GPA: 3.79</b>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <img src="images/h4.png" alt="Lycee Henri-IV Logo">
+						<div>
+						<strong>Lycée Henri-IV</strong><br>
+							Intensive preparation classes for the French engineering schools nationwide competitive examination (undergraduate level)<br>
+							<b style="font-size: 0.8em;">GPA: 3.97</b>
+						</div>
+					</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="three">
+            <div class="container">
+
+                <header>
+                    <h2>Contact</h2>
+                </header>
+
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(510) 717-8567</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto: huuquang_huynh@berkeley.edu">huuquang_huynh@berkeley.edu</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/huu-quang-huynh/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+                </section>
+        </section>
+        </footer>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li>
+            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </div>
+
+	<!-- Modal 1 -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Development of Longitudinal and Lateral Control Systems for Autonomous IndyCar Racing</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/roar1.jpg" alt="ROAR 1">
+				<img src="images/roar22.png" alt="ROAR 2">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Developed a record-breaking autonomous racing solution for the ROAR Simulation Racing Series.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Combined a Pure Pursuit controller for lateral control with a PID controller for longitudinal dynamics.</li>
+					<li>Emulated the racing vehicle in the CARLA Research Environment.</li>
+					<li>Used a Single-Track model to accurately predict vehicle dynamics and optimize the control strategies.</li>
+					<li>Implemented an offline global trajectory optimization for speed and path planning.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Achieved the fastest time in the competition, setting a new record of 342.1 seconds for three loops on the Monza Circuit.</li>
+					<li>Outperformed all previous competitors by optimizing control and prediction models.</li>
+					<li>Demonstrated significant advancements in autonomous racing performance using model-free methods and optimization techniques.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Modal 2 -->
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Refining Autonomous Go-Karts: Advanced Control, Path Planning, and Localization Prototyping</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/kart1.jpg" alt="Kart 1">
+				<img src="images/kart2.jpg" alt="Kart 2">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Develop and implement an enhanced braking system for a racing go-kart and improve localization precision for a fully autonomous go-kart.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Go-Kart Braking System:</li>
+					<ul class="level-2">
+						<li>Identified the need to replace the existing braking system due to its slow response in competitive racing scenarios.</li>
+						<li>Designed a new system featuring a hydraulic pump for rapid brake fluid compression.</li>
+						<li>Integrated a PID algorithm to compare the desired brake pressure with the actual pressure measured by a sensor.</li>
+						<li>Employed Pulse Width Modulation (PWM) signals to adjust the hydraulic pump pressure based on the PID algorithm.</li>
+						<li>Stored and executed the control algorithm on the vehicle’s central processing unit for precise and faster brake control.</li>
+					</ul>
+					<li>Autonomous Go-Kart Localization:</li>
+					<ul class="level-2">
+						<li>Worked on a fully autonomous go-kart project for one year, focusing on enhancing localization precision.</li>
+						<li>Integrated GPS and IMU data using a Sensor Fusion Algorithm to improve accuracy.</li>
+						<li>Chose the Extended Kalman Filter (EKF) for state estimation with multiple sensors.</li>
+						<li>Implemented the EKF in Python to fuse data from GPS and IMU, improving the go-kart’s positional awareness.</li>
+					</ul>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Go-Kart Braking System:</li>
+					<ul class="level-2">
+						<li>Achieved a significant reduction in brake deployment time, from 1-2 seconds to 20-30 milliseconds.</li>
+						<li>Enhanced safety and control during competitive racing.</li>
+						<li>Demonstrated a hundredfold improvement in brake response time.</li>
+					</ul>
+					<li>Autonomous Go-Kart Localization:</li>
+					<ul class="level-2">
+						<li>Successfully integrated GPS and IMU data, significantly improving localization precision.</li>
+						<li>The EKF-based Sensor Fusion Algorithm provided reliable and accurate state estimates.</li>
+						<li>Enhanced the go-kart’s autonomous navigation capabilities, ensuring precise and reliable operation.</li>
+					</ul>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Modal 3 -->
+	<div id="modal3" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Enhancing Aerodynamic Coefficient Prediction through Artificial Neural Networks</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/drag.png" alt="Drag Graph">
+				<img src="images/lift.png" alt="Lift Graph">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Predict the aerodynamic coefficients of a wing (lift, drag, and moment) from its geometry using an Artificial Neural Network.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Data Collection and Preparation:</li>
+					<ul class="level-2">
+						<li>Gathered data from an online database of 1600 airfoils, including geometry parameters and aerodynamic coefficients at different angles of attack and Reynolds numbers.</li>
+						<li>Used a scraping algorithm to download data files from the website, resulting in a dataset of 695,455 rows.</li>
+						<li>Prepared data by normalizing it to ensure faster convergence during training and splitting it into training (80%) and validation (20%) sets.</li>
+					</ul>
+					<li>Model Training and Optimization:</li>
+					<ul class="level-2">
+						<li>Trained multiple neural network architectures to minimize mean absolute error (MAE).</li>
+						<li>Implemented a learning rate schedule with the Adam optimizer to adaptively reduce the learning rate, improving convergence.</li>
+						<li>Added dropout layers to prevent overfitting, though this increased training time.</li>
+					</ul>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Developed a neural network capable of predicting lift, drag, and moment coefficients with high accuracy.</li>
+					<li>Achieved a mean absolute error of 0.129 with an adaptive learning rate schedule.</li>
+					<li>Demonstrated the effectiveness of neural networks in reducing computational effort and enhancing the efficiency of aerodynamic predictions in aircraft design.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Modal 4 -->
+	<div id="modal4" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Turbocharger Design: Boosting Performance with Precision Engineering</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/turbocharger1.png" alt="Turbocharger Design 1">
+				<img src="images/turbocharger2.png" alt="Turbocharger Design 2">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Design, simulate, and test a car turbocharger fueled with hydrogen.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Pre-scaled the turbine blades using Euler's equation and Cordier's diagram and determined blade thickness through polynomial extrapolations.</li>
+					<li>Designed the turbocharger turbine and volute using CATIA V5 Generative Shape Design and Part Design modules.</li>
+					<li>Tested the prototype through flow simulations inside the turbocharger (using StarCCM+).</li>
+					<li>Validated the design with a 3D-printed prototype.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Developed a functional car turbocharger fueled with hydrogen.</li>
+					<li>Utilized a range of software and analysis tools to design, simulate, and test the performance of the turbocharger.</li>
+					<li>Achieved 68% efficiency with the printed prototype.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Modal 5 -->
+	<div id="modal5" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Innovating Aircraft Brake System Design</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/brake1.png" alt="Aircraft Brake Design 1">
+				<img src="images/brake2.png" alt="Aircraft Brake Design 2">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Design a compact carbon/carbon brake system for an aircraft.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Conducted dimensioning calculations to determine the number and size of rotor discs, stator discs, and pistons.</li>
+					<li>Sized the screwing system and selected bearings based on mechanical constraints and specifications.</li>
+					<li>Used CATIA V5 Part Design and Assembly Design modules to design the braking system.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Developed a lightweight and high energy absorption capacity carbon/carbon brake system for an aircraft.</li>
+					<li>Utilized CAD software and finite element analysis to design and validate the brake system.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+	<!-- Modal 6 -->
+	<div id="modal6" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Designing an Advanced Speed Reducer</h2>
+			<br>
+			<div class="image-container">
+				<img src="images/reducer1.png" alt="Speed Reducer Design 1">
+				<img src="images/reducer2.png" alt="Speed Reducer Design 2">
+			</div>
+			<p>
+				<b style="font-size: 1.2em;">What?</b>
+				<ul class="level-1">
+					<li>Pre-dimension and design a speed reducer.</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">How?</b>
+				<ul class="level-1">
+					<li>Pre-dimensioned the structure based on the gear ratio, including the sizing of the gears and the selection of bearings.</li>
+					<li>Designed the crankcase and created technical and industrial drawings of the reducer.</li>
+					<li>Modeled the reducer in CAD software (3DExperience).</li>
+				</ul>
+			</p>
+			<p>
+				<b style="font-size: 1.2em;">Results</b>
+				<ul class="level-1">
+					<li>Developed a comprehensive design for a speed reducer, including the structure, gears, bearings, and crankcase.</li>
+					<li>Created technical and industrial drawings to accurately communicate the design.</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+	<script>
+        // Get all modal elements
+        var modals = document.querySelectorAll('.modal');
+        // Get all open modal buttons
+        var openModalBtns = document.querySelectorAll('.open-modal');
+        // Get all close buttons
+        var closeBtns = document.querySelectorAll('.close');
+
+        // Function to open modal
+        openModalBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = document.getElementById(this.dataset.modal);
+                modal.style.display = 'block';
+            }
+        });
+
+        // Function to close modal
+        closeBtns.forEach(function(btn) {
+            btn.onclick = function() {
+                var modal = this.closest('.modal');
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal if user clicks outside of it
+        window.onclick = function(event) {
+            modals.forEach(function(modal) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
