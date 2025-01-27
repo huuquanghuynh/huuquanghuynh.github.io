@@ -1847,7 +1847,6 @@ input, select, textarea {
 	form select,
 	form textarea {
 		position: relative;
-		-webkit-appearance: none;
 		display: block;
 		border: 0;
 		outline: 0;
@@ -2631,3 +2630,356 @@ input, select, textarea {
 				}
 
 	}
+
+	
+
+Style for level-1 bullets
+ul.level-1 {
+	list-style-type: disc;
+	font-family: inherit;
+	font-size: 1em;
+}
+
+/* Style for level-2 bullets */
+ul.level-1 ul.level-2 {
+	list-style-type: circle;
+	font-family: inherit;
+	font-size: 0.9em;
+}
+
+/* Modal styles */
+.modal {
+	display: none; 
+	position: fixed; 
+	z-index: 1; 
+	padding-top: 60px; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: 5% auto; 
+	padding: 50px; /* 10px top/bottom 60px right/left */
+	border: none;
+	width: 80%;
+	border-radius: 20px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	max-height: 90%;
+	overflow-y: auto; 
+}
+
+.close {
+	position: absolute;
+	top: 10px; /* Adjust as needed */
+	right: 20px; /* Adjust as needed */
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.image-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.image-container img {
+	width: 45%;
+	height: auto;
+	margin: 10px;
+}
+
+/* Education section styles */
+.education-section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.education-item {
+	display: flex;
+	align-items: flex-start; 
+	background-color: #f9f9f9;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.education-item img {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+.education-item div {
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+}
+
+.education-item strong {
+	font-size: 1.5em;
+	font-family: 'Georgia', serif;
+}
+
+.education-item p {
+	margin: 0;
+	line-height: 1.2;
+}
+
+
+
+
+
+/* Portfolio Section Styling */
+#portfolio {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Header Styling */
+.section-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    border-bottom: 2px solid #ddd;
+    height: 400px; /* Set a height for consistent vertical centering */
+}
+
+.gallery-slides {
+    display: flex;
+    align-items: center; /* Vertically center images in the slide container */
+    transition: transform 0.3s ease;
+    gap: 15px;
+}
+
+.gallery-slide {
+    flex: 0 0 auto;
+    max-width: 300px;
+    display: flex;
+    align-items: center; /* Center images vertically in individual slides */
+    justify-content: center; /* Center images horizontally in individual slides */
+}
+
+.gallery-slide img {
+    max-width: 100%; /* Ensure images don't exceed their container width */
+    max-height: 100%; /* Ensure images don't exceed their container height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Background for visibility */
+    border: none; /* Remove border */
+    border-radius: 100%; /* Rounded corners */
+    width: 30px; /* Explicit width */
+    height: 30px; /* Explicit height */
+    padding: 0; /* Remove any internal padding */
+    margin: 0; /* Remove any external margin */
+    box-sizing: border-box; /* Ensure padding and border don’t affect width/height */
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-nav:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+
+.gallery-nav::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.gallery-nav-prev::before {
+    border-width: 5px 10px 5px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.gallery-nav-next::before {
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.gallery-nav:hover {
+    background: #D3D3D3;
+}
+
+
+
+.gallery-nav-prev { left: 10px; }
+.gallery-nav-next { right: 10px; }
+
+
+/* Scrollable Image Container */
+.scroll-container {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Center content horizontally */
+    margin: 20px 0;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    border-bottom: 2px solid #ddd;
+    height: 100%; /* Ensure the container has height for vertical alignment */
+}
+
+/* Scroll Content */
+.scroll-content {
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Center images within the content */
+}
+
+/* Image Styles */
+.image-wrapper img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.image-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+/* Optional: Prevent Body Scroll (if needed) */
+body {
+    overflow-x: hidden; /* Prevent scrolling on the entire page */
+}
+
+
+
+
+/* Content Section */
+.content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-top: 20px;
+}
+
+.content ul {
+    margin: 10px 0 20px 20px;
+    list-style-type: disc;
+    color: #555;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        text-align: center;
+    }
+
+    .scroll-content {
+        gap: 10px;
+    }
+}
+
+
+
+
+/* Portfolio Item Styling */
+#portfolio .item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Optional for rounded corners */
+    overflow: hidden; /* Ensure smooth clipping of shadows */
+}
+
+/* Hover Effect */
+#portfolio .item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Image Styling */
+#portfolio .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add slight zoom effect for images */
+#portfolio .item:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* Education Section Styling */
+#education .education-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Items */
+#education .education-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}

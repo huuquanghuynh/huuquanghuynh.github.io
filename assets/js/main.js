@@ -121,3 +121,55 @@
 				});
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.gallery-slides');
+    const slideElements = document.querySelectorAll('.gallery-slide');
+    const prevBtn = document.querySelector('.gallery-nav-prev');
+    const nextBtn = document.querySelector('.gallery-nav-next');
+
+    let currentIndex = 0; // Index de la slide active
+    const totalSlides = slideElements.length;
+
+    const updateSlidePosition = () => {
+        const slideWidth = slideElements[0].offsetWidth; // Largeur d'une slide
+        const gap = parseInt(window.getComputedStyle(slides).gap || 0); // Espacement entre les slides
+        const containerWidth = slides.parentElement.offsetWidth; // Largeur visible du conteneur
+
+        // Calcul de la translation
+        let translateX = currentIndex * (slideWidth + gap);
+
+        // Si on est sur la dernière image, ajuster pour qu'elle s'arrête à droite
+        const totalContentWidth = totalSlides * (slideWidth + gap);
+        const maxTranslate = totalContentWidth - containerWidth;
+        translateX = Math.min(translateX, maxTranslate);
+
+        slides.style.transition = 'transform 0.5s ease'; // Transition fluide
+        slides.style.transform = `translateX(-${translateX}px)`; // Appliquer la translation
+    };
+
+    // Défilement vers la droite
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Revenir à la première image
+        }
+        updateSlidePosition();
+    });
+
+    // Défilement vers la gauche
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalSlides - 1; // Aller à la dernière image
+        }
+        updateSlidePosition();
+    });
+
+    // Réajuster la position lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', updateSlidePosition);
+});
+
+
